@@ -1,0 +1,7 @@
+# *.md linguist-detectable=true
+# *.md linguist-language=Markdown
+# *.md linguist-documentation=false
+
+*.conf linguist-detectable=true
+
+*.yaml linguist-detectable=true

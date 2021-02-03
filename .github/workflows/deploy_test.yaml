@@ -1,0 +1,22 @@
+name: Update remote test server configs
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Nginx config
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.TEST_SERVER_HOST }}
+          username: root
+          password: ${{ secrets.TEST_SERVER_SSH_KEY }}
+          script: |
+            cd /FedorenkaAvenue
+            git pull origin master
+            cp /FedorenkaAvenue/remote_test_server/nginx.conf /etc/nginx/
+            cp /FedorenkaAvenue/remote_test_server/nginx.conf/conf.d /etc/nginx/conf.d
+            systemctl restart nginx
