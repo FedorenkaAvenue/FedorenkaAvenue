@@ -17,6 +17,17 @@ jobs:
           script: |
             cd /FedorenkaAvenue
             git pull origin master
-            cp /FedorenkaAvenue/remote_test_server/nginx.conf /etc/nginx/
-            cp /FedorenkaAvenue/remote_test_server/nginx.conf/conf.d /etc/nginx/conf.d
+            cp /FedorenkaAvenue/remote_test_server/nginx/nginx.conf /etc/nginx/
+            cp /FedorenkaAvenue/remote_test_server/nginx/nginx.conf/conf.d /etc/nginx/conf.d
             systemctl restart nginx
+
+      - name: Update main site
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.TEST_SERVER_HOST }}
+          username: root
+          password: ${{ secrets.TEST_SERVER_SSH_KEY }}
+          script: |
+            cd /FedorenkaAvenue
+            git pull origin master
+            cp /FedorenkaAvenue/site/index.html /var/www/html/fedorenka/
