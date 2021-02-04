@@ -5,10 +5,10 @@ on:
     branches: [master]
 
 jobs:
-  deploy:
+  update_config:
     runs-on: ubuntu-latest
     steps:
-      - name: Update Nginx config
+      - name: fetch Nginx config
         uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{ secrets.TEST_SERVER_HOST }}
@@ -18,9 +18,12 @@ jobs:
             cd /FedorenkaAvenue
             git pull origin master
             cp /FedorenkaAvenue/remote_test_server/nginx/nginx.conf /etc/nginx/
-            cp /FedorenkaAvenue/remote_test_server/nginx/nginx.conf/conf.d /etc/nginx/conf.d
+            cp /FedorenkaAvenue/remote_test_server/nginx/conf.d /etc/nginx/conf.d
             systemctl restart nginx
 
+  deploy_main_site:
+    runs-on: ubuntu-latest
+    steps:
       - name: Update main site
         uses: appleboy/ssh-action@v0.1.2
         with:
