@@ -33,4 +33,4 @@ jobs:
           script: |
             cd /FedorenkaAvenue
             git pull origin master
-            cp /FedorenkaAvenue/site/index.html /var/www/html/fedorenka/
+            cp -r /FedorenkaAvenue/site/. /var/www/html/fedorenka
