@@ -1,0 +1,20 @@
+name: Update remote test server website
+
+on:
+  push:
+    branches: [site]
+
+jobs:
+  deploy_main_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update main site
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.TEST_SERVER_HOST }}
+          username: root
+          password: ${{ secrets.TEST_SERVER_SSH_KEY }}
+          script: |
+            cd /FedorenkaAvenue
+            git pull origin master
+            cp -r /FedorenkaAvenue/site/. /var/www/html/fedorenka
