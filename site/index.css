@@ -50,6 +50,7 @@ header, main {
 }
 
 header {
+    position: relative;
     background-color: var(--main-bg-color);
     text-align: right;
 }
@@ -57,6 +58,10 @@ header {
 h1 {
     margin: 20px 0;
     white-space: nowrap;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 .slogan {
@@ -77,8 +82,31 @@ nav li {
 }
 
 @media (orientation: portrait) {
+    a {
+        font-size: 1.2rem;
+    }
+
     body {
         flex-direction: column;
         padding: 0;
+    }
+
+    h1 {
+        align-self: flex-start;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    nav {
+        margin: 5px 0;
+    }
+
+    .back {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    main {
+        padding: 10px;
     }
 }

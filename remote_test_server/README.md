@@ -8,8 +8,8 @@
 
 ## Subdomains
 
- * `apple.`: [Apple🥧pie](https://github.com/FedorenkaAvenue/Apple_pie)
- * `beria.`: [Beria🦅](https://github.com/FedorenkaAvenue/Beria)
+ * `apple`: [Apple🥧pie](https://github.com/FedorenkaAvenue/Apple_pie)
+ * `beria`: [Beria🦅](https://github.com/FedorenkaAvenue/Beria)
  * `docs`: [Magallanes⛵️](https://github.com/FedorenkaAvenue/Magallanes)
 
 ## TCP/IP Network
@@ -27,3 +27,9 @@
 
  * [Magallanes⛵️](https://github.com/FedorenkaAvenue/Magallanes)
     * `911`: [docker](https://github.com/FedorenkaAvenue/Magallanes) container
+
+## SSL
+
+SSl сгенерирован через [Certbot](https://certbot.eff.org/).    
+Местонахождение сертификата: `/etc/letsencrypt/live/fedorenka.online/`.    
+Создать сертификат: `certbot --nginx -d sub.domain.com`.    
