@@ -23,8 +23,6 @@
 
 # Fedorenka avenue📬
 
-конфиги для тестового, продакшин серверов. офф сайт.
-
 ![online](https://img.shields.io/website?url=http://fedorenka.online)
 
 ## Docs
