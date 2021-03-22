@@ -18,4 +18,4 @@ jobs:
             cd /FedorenkaAvenue
             git pull
             git checkout site
-            cp -r /FedorenkaAvenue/site/. /var/www/html/fedorenka
+            cp -r /FedorenkaAvenue/website/. /var/www/html/fedorenka
