@@ -1,0 +1,138 @@
+:root {
+    --red-color: #dc143c;
+    --black-color: black;
+    --white-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 20px 0;
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+a {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    transition: transform .5s;
+}
+
+a:hover {
+    transform: translateX(-5px);
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url("PoiretOne-Regular.ttf");
+}
+
+/* main style */
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    padding: 0 5vw;
+    font-family: Inconsolata, monospace;
+}
+
+/* header */
+
+header, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+    padding: 0 10px;
+}
+
+header {
+    position: relative;
+    align-items: flex-end;
+    background-color: var(--red-color);
+    text-align: right;
+}
+
+.slogan {
+    font-size: .8rem;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+.back {
+    position: absolute;
+    bottom: 5px;
+}
+
+/* main */
+
+main {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+article {
+    max-width: 100%;
+}
+
+.board {
+    display: block;
+    overflow-x: auto;
+    padding: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: monospace;
+}
+
+@media (orientation: portrait) {
+    a {
+        font-size: 1.2rem;
+    }
+
+    body {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    h1 {
+        align-self: flex-start;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    nav {
+        margin: 5px 0;
+    }
+
+    .back {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}

@@ -18,7 +18,7 @@ jobs:
             cd /FedorenkaAvenue
             git pull origin config
             git checkout config
-            cp /FedorenkaAvenue/remote_test_server/nginx/nginx.conf /etc/nginx/
-            cp -R -f /FedorenkaAvenue/remote_test_server/nginx/conf.d /etc/nginx/
+            cp /FedorenkaAvenue/test_server/nginx/nginx.conf /etc/nginx/
+            cp -R -f /FedorenkaAvenue/test_server/nginx/conf.d /etc/nginx/
             nginx -t
             nginx -s reload
