@@ -6,7 +6,7 @@ window.addEventListener('load', getDockerStatus);
 
 async function getDockerStatus() {
     try {
-        const res = await fetch('/docker/ps');
+        const res = await fetch('http://fedorenka.online:1991/docker/ps');
         const responce = await res.text();
 
         if (res.status === 406) return dockerTestServerBoard.innerHTML = 'docker error :(';

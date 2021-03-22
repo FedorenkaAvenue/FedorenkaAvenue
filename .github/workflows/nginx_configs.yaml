@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.TEST_SERVER_SSH_KEY }}
           script: |
             cd /FedorenkaAvenue
-            git pull
+            git pull origin config
             git checkout config
             cp /FedorenkaAvenue/remote_test_server/nginx/nginx.conf /etc/nginx/
             cp -R -f /FedorenkaAvenue/remote_test_server/nginx/conf.d /etc/nginx/
