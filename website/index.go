@@ -1,26 +1,26 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"os/exec"
 )
 
 func getDockerStatus(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Access-Control-Allow-Origin", "*")
+
 	cmd := exec.Command("docker", "ps", "-a", "--format", "table {{ .ID }}\t{{ .Names }}\t{{.Status}}\t{{.Ports}}")
 	stdout, err := cmd.Output()
 
 	if err != nil {
-		fmt.Println(err.Error())
+		w.WriteHeader(http.StatusNotAcceptable)
+
 		return
 	}
 
-	res := []byte(string(stdout))
-	w.Header().Add("Access-Control-Allow-Origin", "*")
-	w.Write(res)
+	w.Write(stdout)
 }
 
 func main() {
-	http.HandleFunc("/dockerps", getDockerStatus)
+	http.HandleFunc("/docker/ps", getDockerStatus)
 	http.ListenAndServe(":1991", nil)
 }
