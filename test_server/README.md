@@ -14,7 +14,7 @@
 
 ## TCP/IP Network
 
- * [website📬](../website/README.md)
+ * [website📬](../website)
 
     * `80`
 

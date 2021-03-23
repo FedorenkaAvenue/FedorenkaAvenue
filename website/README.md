@@ -4,12 +4,12 @@
 
 ## Description
 
-Oфф сайт компании с быстрыми ссылками на тестовый сервер и состоянием контейнеров сервера
-
-## Deploy
-
- * `make build` сборка сайта
+[Oфф сайт](https://fedorenka.online) компании с быстрыми ссылками на тестовый сервер и состоянием контейнеров сервера.
 
 ## Docs
 
  * [Nginx конфиги](../test_server/nginx/conf.d/website.conf) для сайта
+
+## Guides
+
+Запрашиваемый статус контейнеров отдает включенный на сервере пакет [Andy](https://github.com/bringmetheaugust/Andy) через `docker` сервис.
