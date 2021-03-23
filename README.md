@@ -1,4 +1,4 @@
-<!-- <div align="center">
+<div align="center">
 
 <img src="./geras.jpg" width="300" title="sexy boy :3" />
 
@@ -12,24 +12,7 @@
 
 ##### Docs🔖
 
-[Тестовый удаленный сервер🖥](./remote_test_server/README.md)    
+[Тестовый удаленный сервер🖥](./test_server/README.md)    
+[Федоренка вебсайт📬](./website/README.md)    
 
-##### Deploy🦸
-
-`site` ветка для *fedorenka.online*    
-`config` ветка для конфигов тестового сервера
-
-</div> -->
-
-# Fedorenka avenue📬
-
-![online](https://img.shields.io/website?url=http://fedorenka.online)
-
-## Docs
-
- * [Тестовый удаленный сервер🖥](./remote_test_server/README.md)    
-
-## Deploy (через *github actions*)
-
- * `site` ветка для *fedorenka.online*    
- * `config` ветка для конфигов тестового сервера
+</div>

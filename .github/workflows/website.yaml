@@ -16,6 +16,6 @@ jobs:
           password: ${{ secrets.TEST_SERVER_SSH_KEY }}
           script: |
             cd /FedorenkaAvenue
-            git pull
+            git pull origin site
             git checkout site
-            cp -r /FedorenkaAvenue/site/. /var/www/html/fedorenka
+            cp -r /FedorenkaAvenue/website/. /var/www/html/fedorenka
