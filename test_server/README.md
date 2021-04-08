@@ -32,8 +32,22 @@
  * [Magallanes⛵️](https://github.com/FedorenkaAvenue/Magallanes)
     * `911`: [docker](https://github.com/FedorenkaAvenue/Magallanes) container
 
-## SSL
+## Auth
 
-SSl сгенерирован через [Certbot](https://certbot.eff.org/).    
-Местонахождение сертификата: `/etc/letsencrypt/live/fedorenka.online/`.    
-Создать сертификат: `certbot --nginx -d sub.domain.com`.    
+ * user: `root`
+ * pass: `fedorenka`
+
+## Guides
+
+<details>
+   <summary>📔генерирование <i>SSL</i></summary>
+      SSl сгенерирован через <a href="https://certbot.eff.org/">Certbot</a>.<br>
+      Местонахождение сертификата: <code>/etc/letsencrypt/live/fedorenka.online/</code><br>
+      Создать сертификат: <code>certbot --nginx -d sub.domain.com</code><br>
+</details>  
+
+<details>
+   <summary>📔<i>Nginx</i> auth</summary>
+      <code>apache2-utils</code> для использования <code>htpasswd</code><br>
+      <code>htpasswd -c /etc/nginx/.http_auth USER</code> для генерирования юзера и пароля
+</details>
