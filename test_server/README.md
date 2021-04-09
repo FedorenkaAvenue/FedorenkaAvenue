@@ -35,7 +35,7 @@
 ## Auth
 
  * user: `root`
- * pass: `fedorenka`
+ * pass: `barabaka35`
 
 ## Guides
 
