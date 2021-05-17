@@ -29,6 +29,9 @@
     * `82`: [Nginx](https://github.com/FedorenkaAvenue/Beria/tree/master/nginx) entrypoint container
     * `6380`: [Redis](https://github.com/FedorenkaAvenue/Beria/tree/master/redis)
 
+ * [Garage🏚](https://github.com/FedorenkaAvenue/Garage)
+    * `83`: [Nginx](https://github.com/FedorenkaAvenue/Garage/blob/master/nginx/README.md) entry container
+
  * [Magallanes⛵️](https://github.com/FedorenkaAvenue/Magallanes)
     * `911`: [docker](https://github.com/FedorenkaAvenue/Magallanes) container
 
